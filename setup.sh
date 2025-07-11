@@ -11,13 +11,13 @@ SCRIPT_PATH=
 
 case "$ARCH" in
 x86_64)
-  SCRIPT_PATH="$SCRIPT_DIR"/setup/setup-amd64.sh
+  SCRIPT_PATH="$SCRIPT_DIR/setup/setup-amd64.sh"
   ;;
 arm64 | aarch64)
-  SCRIPT_PATH="$SCRIPT_DIR"/setup/setup-arm64.sh
+  SCRIPT_PATH="$SCRIPT_DIR/setup/setup-arm64.sh"
   ;;
 *)
-  SCRIPT_PATH="$SCRIPT_DIR"/setup/setup-amd64.sh
+  SCRIPT_PATH="$SCRIPT_DIR/setup/setup-amd64.sh"
   ;;
 esac
 
@@ -29,4 +29,5 @@ fi
 
 # Run the setup script
 chmod +x "$SCRIPT_PATH"
+chmod +x "$SCRIPT_DIR/setup/setup-common.sh"
 "$SCRIPT_PATH"
